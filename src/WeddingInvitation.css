@@ -1,0 +1,54 @@
+.door-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 9999;
+    pointer-events: none;
+  
+    background-image: url("https://as2.ftcdn.net/v2/jpg/09/12/86/09/1000_F_912860992_f7vVuFsoBbYYu6bJlFvHDM9yzAsA5HL0.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  /* Base door styling */
+  .door {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 2s ease;
+    z-index: 2;
+  }
+  
+  /* Door positioning */
+  .left-door {
+    left: 0;
+    transform-origin: left;
+  }
+  
+  .right-door {
+    right: 0;
+    transform-origin: right;
+  }
+  
+  /* Animation trigger */
+  .open-left {
+    transform: rotateY(-90deg);
+  }
+  
+  .open-right {
+    transform: rotateY(90deg);
+  }
+  
+  /* Responsive tweaks (optional for very small screens) */
+  @media (max-width: 600px) {
+    .door {
+      object-fit: contain;
+    }
+  }
+  
