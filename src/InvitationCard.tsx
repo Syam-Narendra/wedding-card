@@ -17,15 +17,15 @@ export const InvitationCard = () => {
     transform: showInvitation ? "translateY(0)" : "translateY(50px)",
     config: { tension: 120, friction: 14 },
   });
+  const AnimatedDiv = animated("div");
 
   return (
-    <animated.div
+    <AnimatedDiv
       style={invitationAnimation}
       className="flex-1 flex flex-col items-center justify-start pt-8 px-4 overflow-y-auto"
     >
       <div className="max-w-4xl w-full bg-gradient-to-b from-amber-50 to-amber-100 opacity-85 rounded-lg border-2 border-amber-600 p-8 shadow-lg">
         <div className="flex flex-col items-center">
-          {/* Decorative elements */}
           <div className="flex justify-center mb-6">
             <Bell className="h-8 w-8 text-amber-800 mr-2" />
             <div className="h-0.5 w-32 bg-amber-800 self-center"></div>
@@ -33,8 +33,6 @@ export const InvitationCard = () => {
             <div className="h-0.5 w-32 bg-amber-800 self-center"></div>
             <Bell className="h-8 w-8 text-amber-800 ml-2" />
           </div>
-
-          {/* Rangoli pattern (simplified) */}
           <div className="w-24 h-24 mb-6 relative">
             <div className="absolute inset-0 border-2 border-amber-700 rounded-full"></div>
             <div className="absolute inset-2 border-2 border-amber-700 rounded-full"></div>
@@ -86,6 +84,6 @@ export const InvitationCard = () => {
           <p className="mt-4 text-amber-800 text-sm">ॐ नमो वेङ्कटेशाय</p>
         </div>
       </div>
-    </animated.div>
+    </AnimatedDiv>
   );
 };
