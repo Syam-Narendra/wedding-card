@@ -1,5 +1,5 @@
 .door-container {
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100vw;
@@ -51,4 +51,5 @@
       object-fit: contain;
     }
   }
+
   
